@@ -1,28 +1,21 @@
 # AI_Structure_Solvation
 
-### Integration (GISTPP) steps:
-gistpp_fcn.py -> integration_fcn.py -> process_gistpp_results.py
+## GIST Post-Processing (GISTPP) Integration Pipeline
 
-- gistpp_fcn.py:
-The first step (preprocessing step) to integrate the GIST results.
+### Integration Workflow
+The integration process follows these steps:
+1. `gistpp_fcn.py` → 2. `integration_fcn.py` → 3. `process_gistpp_results.py`
 
-- integration_fcn.py:
-Loops to integrate energy & h-bonds properties for the combinations (target × structure × block × volume).
+**Step descriptions:**
+* **gistpp_fcn.py**: Preprocessing step to prepare GIST results for integration
+* **integration_fcn.py**: Iterates through all combinations (targets × structures × blocks × volumes) to integrate energy and hydrogen bond properties
+* **process_gistpp_results.py**: Post-processes integrated results and generates final reports
 
-- process_gistpp_results.py:
-Post-processing the results data to report. 
+---
 
+## Non-Integration Scripts
 
-### Non integration scripts
-- FindCentroid.py:
-To find the centroid of the protein/ligand required for GIST run
-
-- extract_ligand.py:
-The ligand is required for GIST results integration (binding site selection). C
-heck the usage with "python extract_ligand.py -h"
-
-- make_avg_submit_file.py:
-Generate the cpptraj input files for the time-average structure of the trajectory.
-
-- gen_tleap.py:
-Generates tLeap input files.
+* **FindCentroid.py**: Calculates the centroid of protein/ligand structures required for GIST runs
+* **extract_ligand.py**: Extracts ligand structures needed for GIST results integration (binding site selection). Check usage with `python extract_ligand.py -h`
+* **make_avg_submit_file.py**: Generates cpptraj input files for computing time-averaged structures from trajectories
+* **gen_tleap.py**: Generates tLeap input files for system preparation. Check usage with `python gen_tleap.py -h`
