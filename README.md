@@ -18,4 +18,4 @@ The integration process follows these steps:
 * **FindCentroid.py**: Calculates the centroid of protein/ligand structures required for GIST runs
 * **extract_ligand.py**: Extracts ligand structures needed for GIST results integration (binding site selection). Check usage with `python extract_ligand.py -h`
 * **make_avg_submit_file.py**: Generates cpptraj input files for computing time-averaged structures from trajectories
-* **gen_tleap.py**: Generates tLeap input files for system preparation. Check usage with `python gen_tleap.py -h`
+* **gen_tleap.py**: Generates tLeap input files for system prep. Check usage with `python gen_tleap.py -h`
